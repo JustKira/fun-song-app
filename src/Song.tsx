@@ -8,7 +8,7 @@ const Song: React.FC<SongProps> = () => {
   );
 
   return (
-    <div className="flex flex-col items-center gap-4">
+    <div className="relative z-10 flex flex-col items-center gap-4">
       <div className="relative mb-12">
         <img
           className=" relative z-10 w-[300px] rounded-full"
@@ -21,10 +21,10 @@ const Song: React.FC<SongProps> = () => {
           src={currentSong.cover}
         />
       </div>
-      <h1 className=" relative z-20 text-3xl font-extrabold">
+      <h1 className="relative z-10 text-3xl font-extrabold ">
         {currentSong.name}
       </h1>{" "}
-      <h1 className=" relative z-20">{currentSong.artist}</h1>
+      <h1 className="relative z-10 ">{currentSong.artist}</h1>
     </div>
   );
 };

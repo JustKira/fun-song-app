@@ -8,19 +8,19 @@ const SongLibrary = () => {
   const dispatch = useDispatch();
   const SongsRender = () => {
     return (
-      <div className="  flex flex-col mt-12">
+      <div className="flex flex-col mt-12 ">
         {MusicD.map((song, id) => (
           <div
             onClick={() => dispatch(setSong(song))}
             key={id}
-            className="flex group gap-2 p-4 bg-white dark:bg-gray-950 hover:bg-gray-200 hover:dark:bg-gray-800 duration-300"
+            className="flex gap-2 p-4 duration-300 bg-white group dark:bg-gray-950 hover:bg-gray-200 hover:dark:bg-gray-800"
           >
             <img
               alt={`${song.name} img`}
-              className="w-1/2 rounded-3xl group-hover:rounded-md duration-300"
+              className="w-1/2 duration-300 rounded-3xl group-hover:rounded-md"
               src={song.cover}
             />
-            <div className="flex  flex-col justify-start">
+            <div className="flex flex-col justify-start">
               <h1 className="text-3xl">{song.name}</h1>
               <h1>{song.artist}</h1>
             </div>
@@ -32,7 +32,7 @@ const SongLibrary = () => {
   return (
     <>
       <button
-        className="flex justify-center items-center absolute left-0 top-0 z-50 bg-gray-950 text-white dark:text-black dark:bg-white h-12 w-12 rounded-full"
+        className="absolute top-0 left-0 z-50 flex items-center justify-center w-12 h-12 text-white rounded-full bg-gray-950 dark:text-black dark:bg-white"
         type="button"
         onClick={() => {
           setExtend(!extend);
@@ -42,7 +42,7 @@ const SongLibrary = () => {
         <Music />
       </button>
       <div
-        className={`absolute left-0 h-screen w-[400px] duration-700 transition-all ease-in-out overflow-y-scroll ${
+        className={`absolute left-0 h-screen w-[400px] z-30 duration-700 transition-all ease-in-out overflow-y-scroll ${
           extend ? "" : "-translate-x-full "
         }`}
       >
