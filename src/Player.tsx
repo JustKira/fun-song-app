@@ -1,5 +1,4 @@
 import { Play, SkipForward, SkipBack, Pause } from "lucide-react";
-import { Song } from "../types";
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "./redux/store";
